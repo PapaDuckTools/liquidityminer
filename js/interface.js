@@ -1,5 +1,5 @@
-var minersAddr = '0xcD312F9c9f6601e0f905884db04A09408A79D79C';
-var tokenAddr = '0x6982508145454Ce325dDbE47a25d4ec3d2311933';
+var minersAddr = '0x3165556615F1DF8275d0b49d1D38f146c0D96c06';
+var tokenAddr = '0x1E87b1F395a6a61c8dEc2933a527680bb723bE11';
 var minersAbi =
 [
 	{
@@ -645,6 +645,7 @@ function buyEggs(ref, trx, callback){
 		alert("You don't have " + trx + " PEPE in your wallet");
 	}
 	else if(+trx > +spend) {
+		
 		alert("Approve spending " + trx + " PEPE first");
 	} else {
 			minersContract.methods.buyEggs(ref, web3.utils.toWei(trx)).send({ from:currentAddr }).then(result => {
